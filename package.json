@@ -5,11 +5,11 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": ">=18" 
+    "node": ">=18"
   },
   "scripts": {
-    "dev": "tsx watch --clear-screen=false src/server.ts",
-    "prod": "node build/server.cjs",
+    "start:dev": "tsx watch --clear-screen=false src/server.ts",
+    "start": "node build/server.cjs",
     "build": "tsup src -d build",
     "lint": "eslint src --ext .ts --fix"
   },
@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fastify": "^4.18.0"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
