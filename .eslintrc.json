@@ -23,7 +23,8 @@
         "arrowParens": "always",
         "semi": true
       }
-    ]
+    ],
+    "@typescript-eslint/explicit-function-return-type": false
   },
   "settings": {
     "import/parsers": {
