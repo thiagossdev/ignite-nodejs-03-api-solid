@@ -14,6 +14,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
     "lint": "eslint src --ext .ts --fix"
   },
   "keywords": [],
@@ -30,6 +31,7 @@
     "@typescript-eslint/eslint-plugin": "5.60.0",
     "@typescript-eslint/parser": "5.60.0",
     "@vitest/coverage-v8": "0.32.2",
+    "@vitest/ui": "0.32.2",
     "dotenv": "16.3.1",
     "eslint": "8.43.0",
     "eslint-config-prettier": "8.8.0",
