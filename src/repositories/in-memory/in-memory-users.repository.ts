@@ -18,6 +18,10 @@ export class InMemoryUsersRepository implements UsersRepository {
     return item;
   }
 
+  async findById(id: string) {
+    return this.items.find((item) => item.id === id);
+  }
+
   async findByEmail(email: string) {
     return this.items.find((item) => item.email === email);
   }
