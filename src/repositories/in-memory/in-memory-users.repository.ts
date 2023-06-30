@@ -1,9 +1,9 @@
-import { type Prisma } from '@prisma/client';
+import { type Prisma, type User } from '@prisma/client';
 import { randomUUID } from 'node:crypto';
 import { type UsersRepository } from '../users.repository';
 
 export class InMemoryUsersRepository implements UsersRepository {
-  private readonly items: any[] = [];
+  private readonly items: User[] = [];
 
   async create(data: Prisma.UserCreateInput) {
     const item = {
@@ -20,10 +20,10 @@ export class InMemoryUsersRepository implements UsersRepository {
   }
 
   async findById(id: string) {
-    return this.items.find((item) => item.id === id);
+    return this.items.find((item) => item.id === id) ?? null;
   }
 
   async findByEmail(email: string) {
-    return this.items.find((item) => item.email === email);
+    return this.items.find((item) => item.email === email) ?? null;
   }
 }
