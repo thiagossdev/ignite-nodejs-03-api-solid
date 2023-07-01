@@ -4,7 +4,7 @@ import { getDistanceBetweenCoordinates } from '@/utils/get-distance-between-coor
 import { type CheckIn } from '@prisma/client';
 import { MaxDistanceError } from './errors/max-distance.error';
 import { MaxNumberOfCheckInsError } from './errors/max-numbers-of-check-ins.error';
-import { ResourceNotFoundError } from './errors/resourse-not-found.error';
+import { ResourceNotFoundError } from './errors/resource-not-found.error';
 
 interface CheckInUseCaseRequest {
   user: {
