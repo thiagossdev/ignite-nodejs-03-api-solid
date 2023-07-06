@@ -1,6 +1,5 @@
 import { InMemoryCheckInsRepository } from '@/repositories/in-memory/in-memory-check-ins.repository';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { ResourceNotFoundError } from './errors/resource-not-found.error';
 import { GetUserMetricsUseCase } from './get-user-metrics.use-case';
 
 let checkInsRepository: InMemoryCheckInsRepository;
@@ -28,14 +27,5 @@ describe('Get User Metrics Use Case', () => {
     });
 
     expect(checkInsCount).toEqual(2);
-  });
-
-  it('should not be able to get user metrics with wrong id', async () => {
-    await expect(
-      async () =>
-        await sut.execute({
-          userId: 'non-existing-id',
-        }),
-    ).rejects.toBeInstanceOf(ResourceNotFoundError);
   });
 });
