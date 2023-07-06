@@ -95,7 +95,7 @@ describe('Check-in Use Case', () => {
   it('should not be able to check in on distant gym', async () => {
     await gymsRepository.create({
       id: 'gym-02',
-      title: 'JavaScript Gym',
+      title: 'TypeScript Gym',
       latitude: -23.4443397,
       longitude: -46.5066264,
     });
